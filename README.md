@@ -10,13 +10,13 @@ The mechanism is inspired by the article [Ever wonder what the perfect todo list
 ```$ todo```
 starts vim with a daily todo file e.g. "~/Google Drive/work/todos/01_21_2018.txt"
 
-Inside vim entering `gt` will add a new task line. With the cursor on a taskline.
+Inside vim entering `gt` will add a new task line:
 ```
 
   _ my example task
 ```
 
-Entering `gg` will complete the task with a completion timestamp.
+With the cursor on a taskline, entering `gg` will complete the task with a completion timestamp:
 ```
 
   x my example task [18:57]
