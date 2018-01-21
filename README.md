@@ -34,8 +34,6 @@ Available variables are listed below, along with default values (see `defaults/m
       vars:
         path_to_todo_files: "~/Google\\ Drive/work"
 
-See the [Mac Development Ansible Playbook](https://github.com/geerlingguy/mac-dev-playbook) for an example of this role's usage.
-
 ## License
 
 MIT / BSD
