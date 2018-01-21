@@ -1,0 +1,19 @@
+---
+# <gt> creates a new task line. <gg> set completion timestamp on current
+- name: Configure vim for working with todo files
+  blockinfile:
+    path: ~/.vimrc
+    marker: '" {mark} ANSIBLE MANAGED BLOCK'
+    block: |
+      " check off a todo item and time stamp it
+      map gg ^rx: <Esc>:r! date +" [\%H:\%M]"<ENTER>kJA<Esc>$
+      " create a new todo item
+      map gt o  _
+
+- name: Configure bash aliases for working with todos
+  blockinfile:
+    path: ~/.bash_aliases
+    block: |
+      alias ea='vi $HOME/.bash_aliases; source $HOME/.bash_aliases && echo "$HOME/.bash_aliases sourced  --ok."'
+      alias todo='vim {{ path_to_todo_files }}/todos/$(date +"%m_%d_%Y").txt'
+      alias ptodo='vim {{ path_to_todo_files }}/private_todo.txt'

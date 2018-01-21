@@ -1,0 +1,18 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: htesgaard
+  description: Mac App Store CLI installation for macOS
+  company: "Reflective.it"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.0
+  platforms:
+    - name: GenericUNIX
+      versions:
+        - all
+        - any
+  galaxy_tags:
+    - development
+    - system
+    - packaging
