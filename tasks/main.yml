@@ -1,6 +1,6 @@
 ---
 # <gt> creates a new task line. <gg> set completion timestamp on current
-#- name: Configure vim for working with todo files
+# - name: Configure vim for working with todo files
 #  blockinfile:
 #    path: ~/.vimrc
 #    marker: '" {mark} ANSIBLE MANAGED BLOCK'
@@ -23,16 +23,16 @@
   register: nextcloud_folder
 
 - name: Configure todo-txt config file
-    blockinfile:
-      path: ~/.todo/config
-      block: |
-        export TODO_DIR="$HOME/Nextcloud"
-        export TODO_FILE="$TODO_DIR/todo.txt"
-        export DONE_FILE="$TODO_DIR/done.txt"
-        export REPORT_FILE="$TODO_DIR/report.txt"
-        export TMP_FILE="/tmp/todo.tmp"
-        export TODOTXT_DEFAULT_ACTION=ls
-    when: nextcloud_folder.stat.exists == True
+  blockinfile:
+    path: ~/.todo/config
+    block: |
+      export TODO_DIR="$HOME/Nextcloud"
+      export TODO_FILE="$TODO_DIR/todo.txt"
+      export DONE_FILE="$TODO_DIR/done.txt"
+      export REPORT_FILE="$TODO_DIR/report.txt"
+      export TMP_FILE="/tmp/todo.tmp"
+      export TODOTXT_DEFAULT_ACTION=ls
+  when: nextcloud_folder.stat.exists == True
 
 - name: Configure bash aliases for working with todos
   blockinfile:
@@ -44,4 +44,4 @@
       complete -F _todo t
 
 - name: Include configure_vim.yml
-    include: configure_vim.yml
+  include: configure_vim.yml
