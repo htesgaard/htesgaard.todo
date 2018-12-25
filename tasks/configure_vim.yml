@@ -1,0 +1,9 @@
+---
+# Example git checkout from Ansible Playbooks
+- name: "Checkout todo.txt-vim.git"
+  git:
+    repo: 'https://github.com/freitass/todo.txt-vim.git'
+    dest: "{{playbook_dir}}/.todo.txt-vim"
+
+- name: "Copy files to ~/.vim"
+  shell: "cp -R {{playbook_dir}}/.todo.txt-vim/* ~/.vim"

@@ -1,38 +1,26 @@
-# Ansible Role: shell todo list
+# Ansible Role: shell todo.txt
 
-Ansible role for configuring a mechanism for working on todo lists in the shell.
-
-The mechanism is inspired by the article [Ever wonder what the perfect todo list app is?](https://betterhumans.coach.me/ever-wonder-what-the-perfect-task-management-app-is-22d3de022d79)
-
+Ansible role for configuring [todo.txt](http://todotxt.org/) in the terminal
 
 ## Usage
 
-```$ todo```
-starts vim with a daily todo file e.g. "~/Google Drive/work/todos/01_21_2018.txt"
+### List tasks
+```$ t```
 
-Inside vim entering `gt` will add a new task line:
-```
+### Add tasks
+```$ t add "some task```
 
-  _ my example task
-```
-
-With the cursor on a taskline, entering `gg` will complete the task with a completion timestamp:
-```
-
-  x my example task [18:57]
-```
-
-
+### Bash completion
+```$ t <tab>``` 
 
 ## Role Variables
 
-Available variables are listed below, along with default values (see `defaults/main.yml`):
+None
 
 ## Example Playbook
 
     - hosts: localhost
       vars:
-        path_to_todo_files: "~/Google\\ Drive/work"
 
 ## License
 

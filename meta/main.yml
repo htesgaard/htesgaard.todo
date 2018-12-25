@@ -8,10 +8,10 @@ galaxy_info:
   license: "license (BSD, MIT)"
   min_ansible_version: 2.0
   platforms:
-    - name: GenericUNIX
+    - name: MacOSX
       versions:
-        - all
-        - any
+        - 10.13 # High Sierra
+        - 10.14 # Mojave
   galaxy_tags:
     - development
     - system
