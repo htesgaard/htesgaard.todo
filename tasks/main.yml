@@ -14,7 +14,6 @@
 - name: Ensure configured homebrew packages are installed.
   homebrew:
     name: "todo-txt"
-    install_options: "{{ item.install_options | default(omit) }}"
     state: present
 
 - name: check if ~/Nextcloud exsists
